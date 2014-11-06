@@ -29,7 +29,8 @@ end
 
 % 1px border for gradient calculation
 if ((col ~= 66) || (row ~= 130))
-    disp('Image size must be 130 x 66 pixels (128x64 with 1px border).\n');
+    f = imresize(f, [128, 64]);
+    f = padarray(f, [1 1]);
     return;
 end
 
