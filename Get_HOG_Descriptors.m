@@ -29,9 +29,8 @@ end
 
 % 1px border for gradient calculation
 if ((col ~= 66) || (row ~= 130))
-    f = imresize(f, [128, 64]);
+    f = imresize(f, [128 64]);
     f = padarray(f, [1 1]);
-    return;
 end
 
 hx = gradient;
